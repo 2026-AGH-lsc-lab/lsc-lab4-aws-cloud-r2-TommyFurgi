@@ -1,0 +1,45 @@
+=== lambda-container | concurrency=5 | 500 requests ===
+Summary:
+  Success rate:	100.00%
+  Total:	20530.8438 ms
+  Slowest:	476.5496 ms
+  Fastest:	151.8227 ms
+  Average:	204.1415 ms
+  Requests/sec:	24.3536
+
+  Total data:	185.50 KiB
+  Size/request:	379 B
+  Size/sec:	9.04 KiB
+
+Response time histogram:
+  151.823 ms [1]   |
+  184.295 ms [62]  |■■■■■
+  216.768 ms [350] |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  249.241 ms [82]  |■■■■■■■
+  281.713 ms [0]   |
+  314.186 ms [0]   |
+  346.659 ms [0]   |
+  379.132 ms [0]   |
+  411.604 ms [0]   |
+  444.077 ms [0]   |
+  476.550 ms [5]   |
+
+Response time distribution:
+  10.00% in 182.5200 ms
+  25.00% in 194.3625 ms
+  50.00% in 202.6293 ms
+  75.00% in 213.5440 ms
+  90.00% in 220.5339 ms
+  95.00% in 225.2260 ms
+  99.00% in 449.8902 ms
+  99.90% in 476.5496 ms
+  99.99% in 476.5496 ms
+
+
+Details (average, fastest, slowest):
+  DNS+dialup:	262.4289 ms, 258.8183 ms, 263.6489 ms
+  DNS-lookup:	0.1059 ms, 0.0496 ms, 0.2161 ms
+
+Status code distribution:
+  [200] 500 responses
+

@@ -1,0 +1,21 @@
+=== Assignment 1: k-NN Consistency Check ===
+Timestamp: Wed, Mar 25, 2026 11:54:51 AM
+----------------------------------------
+
+TARGET: LAMBDA_ZIP
+{"statusCode": 200, "headers": {"Content-Type": "application/json", "X-Server-Time-Ms": "55.272", "X-Instance-Id": "2026/03/25/[$LATEST]e40106cfad964947b1d0a7af285c7c2f", "X-Cold-Start": "false"}, "body": "{\"results\": [{\"index\": 35859, \"distance\": 12.001212120056152}, {\"index\": 24682, \"distance\": 12.059638023376465}, {\"index\": 35397, \"distance\": 12.486770629882812}, {\"index\": 20160, \"distance\": 12.489232063293457}, {\"index\": 30454, \"distance\": 12.49909782409668}], \"query_time_ms\": 55.272, \"instance_id\": \"2026/03/25/[$LATEST]e40106cfad964947b1d0a7af285c7c2f\", \"cold_start\": false}"}
+----------------------------------------
+
+TARGET: LAMBDA_CONTAINER
+{"statusCode": 200, "headers": {"Content-Type": "application/json", "X-Server-Time-Ms": "68.128", "X-Instance-Id": "2026/03/25/[$LATEST]e55ee374bf7d4679a8aa90f966814d4b", "X-Cold-Start": "false"}, "body": "{\"results\": [{\"index\": 35859, \"distance\": 12.001212120056152}, {\"index\": 24682, \"distance\": 12.059638023376465}, {\"index\": 35397, \"distance\": 12.486770629882812}, {\"index\": 20160, \"distance\": 12.489232063293457}, {\"index\": 30454, \"distance\": 12.49909782409668}], \"query_time_ms\": 68.128, \"instance_id\": \"2026/03/25/[$LATEST]e55ee374bf7d4679a8aa90f966814d4b\", \"cold_start\": false}"}
+----------------------------------------
+
+TARGET: FARGATE
+{"instance_id":"ip-172-31-67-212.ec2.internal","query_time_ms":24.211,"results":[{"distance":12.001459121704102,"index":35859},{"distance":12.059946060180664,"index":24682},{"distance":12.487079620361328,"index":35397},{"distance":12.489519119262695,"index":20160},{"distance":12.499402046203613,"index":30454}]}
+
+----------------------------------------
+
+TARGET: EC2
+{"instance_id":"dbc3afac909b","query_time_ms":24.295,"results":[{"distance":12.001459121704102,"index":35859},{"distance":12.059946060180664,"index":24682},{"distance":12.487079620361328,"index":35397},{"distance":12.489519119262695,"index":20160},{"distance":12.499402046203613,"index":30454}]}
+
+----------------------------------------
